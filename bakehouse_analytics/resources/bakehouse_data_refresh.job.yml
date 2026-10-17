@@ -20,12 +20,17 @@ resources:
           default: ${var.catalog}
         - name: schema
           default: ${var.schema}
-
       tasks:
-        - task_key: notebook_task
+        - task_key: customer_360
           notebook_task:
-            notebook_path: ../src/sample_notebook
+            notebook_path: ../src/customer_360.py
+       
+        - task_key: Transection_summary
+          notebook_task:
+            notebook_path: ../src/transection_summary
+              
 
+      
       environments:
         - environment_key: default
           spec:
